@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{%block title%}HomePage{% endblock%}
+{%block meta%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="author" content="BlueMartin Technology">
+
+    <!-- Open Graph meta tags for social sharing (example) -->
+    <meta property="og:title" content="Housify">
+
+
+{%endblock%}
+<!-- Favicon (icon in the browser tab) -->
+<link rel="icon" type="image/png" href="{% static 'img/blue.png'%}">
+
+
+<link rel="stylesheet" href="{% static 'homepage.css' %}">
+
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'homepage.css' %}">
+
+<!-- Slideshow container -->
+<section id="hero">
+    {%for carousel in carousel%}
+    <div class="slideshow-container section-p1">
+        <div class="mySlides">
+            <img class="pic" src="{{carousel.carousel.url}}" width="100%">
+        </div>
+        {% endfor %}
+</section>
+
+<br>
+<script src="{% static 'index.js' %}"></script>
+{% endblock%}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <title>Login | BlueMartin</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BlueMartin: Your one-stop online vendor for electronics, fashion, food, and more. Explore a wide range of products and services on bluemartin.ng. Are you a also an online vendor, or someone offering valuable services such as electrician work, hair dressing, tailoring, and more? Buy and Sell on BlueMartin; join our vibrant commumity at BlueMartin and showcase your goods and services to a wide audience. Visit the BlueMartin Technology Online Vendor Website to experience a seamless online shopping experience. ">
+    
+    <meta name="keywords" content="BlueMartin, BlueMartinTech, BlueMartin Technology, Buy and Sell, Online Vendor, Electronics, Fashion, Food, Services, Supermarket, Crypto, Users, Blogs, Nigeria, Online Shopping, Technology, E-commerce, Marketplace">
+    <meta name="author" content="BlueMartin Technology">
+
+    <!-- Open Graph meta tags for social sharing (example) -->
+    <meta property="og:title" content="BlueMartin">
+    <meta property="og:description" content="BlueMartin Website: Your one-stop online vendor for electronics, fashion, food, and more. Explore a wide range of products and services on bluemartin.ng powered by BlueMartin Technology.">
+    <meta property="og:image" content="{% static 'img/blue.png'%}">
+    <meta property="og:url" content="https://bluemartin.ng">
+    <!-- Favicon (icon in the browser tab) -->
+    <link rel="icon" type="image/png" href="{% static 'img/blue.png'%}">
+
+</head>
+
+<body>
+
+
+    <!-- The Modal -->
+    <div id="id01" class="modal">
+
+        <!-- Modal Content -->
+        <form method="POST" class="modal-content animate" action="">
+            {% csrf_token %}
+            <div class="imgcontainer">
+                <img src="{% static 'img/blue.png' %}" alt="Avatar" class="avatar">
+            </div>
+
+            <br>
+            <div class="danger">
+                <center>
+                    {% for message in messages %}
+                    <strong>
+                        <p>{{message}}</p>
+                    </strong>
+                    {% endfor %}
+                </center>
+            </div>
+
+            
+            <div class="container">
+                <label for="username"><b>Username</b></label>
+                <input type="text" name="username" placeholder="Please enter your username..." required>
+                
+                <label for="password"><b>Password</b></label>
+                <input type="password" id="password" placeholder="Please enter your Password..." name="password" required>
+                
+                <input type="checkbox" onclick="myFunction()">Show Password
+                <ul>
+                    <li>Username and Password are case sensitive</li>
+                    
+                </ul>
+                <button type="submit">Login</button>
+                
+                <center>
+                    
+                    <h4 style="color: blue;">Don't have an account? <a href="{% url 'signup'%}">Sign Up Here</a></h4>
+
+                    <h4><a href="">Forgot Password?</a></h4>
+                </center>
+            </div>
+
+        </form>
+    </div>
+</body>
+<script src="{% static 'login.js' %}"></script>
+</html>

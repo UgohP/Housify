@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'signup.css' %}">
+    <title>Sign_up | BlueMartin</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BlueMartin: Your one-stop online vendor for electronics, fashion, food, and more. Explore a wide range of products and services on bluemartin.ng. Are you a also an online vendor, or someone offering valuable services such as electrician work, hair dressing, tailoring, and more? Buy and Sell on BlueMartin; join our vibrant commumity at BlueMartin and showcase your goods and services to a wide audience. Visit the BlueMartin Technology Online Vendor Website to experience a seamless online shopping experience. ">
+    
+    <meta name="keywords" content="BlueMartin, BlueMartinTech, BlueMartin Technology, Buy and Sell, Online Vendor, Electronics, Fashion, Food, Services, Supermarket, Crypto, Users, Blogs, Nigeria, Online Shopping, Technology, E-commerce, Marketplace">
+    <meta name="author" content="BlueMartin Technology">
+
+    <!-- Open Graph meta tags for social sharing (example) -->
+    <meta property="og:title" content="BlueMartin">
+    <meta property="og:description" content="BlueMartin Website: Your one-stop online vendor for electronics, fashion, food, and more. Explore a wide range of products and services on bluemartin.ng powered by BlueMartin Technology.">
+    <meta property="og:image" content="{% static 'img/blue.png'%}">
+    <meta property="og:url" content="https://bluemartin.ng">
+    <!-- Favicon (icon in the browser tab) -->
+    <link rel="icon" type="image/png" href="{% static 'img/blue.png'%}">
+
+</head>
+
+<body>
+    <!-- The Modal (contains the Sign Up form) -->
+    <div id="id01" class="modal">
+        <span class="close" title="close"><a href="">&times;</a></span>
+        <form method="POST" class="modal-content animate" action="">
+            {% csrf_token%}
+            <div class="container">
+                <img id="logo" src="{% static 'img/blue.png' %}" alt="Logo" width="15%" />
+                <h1>Sign Up</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+
+                <div style="color: red;">{{form.errors}}</div>
+
+                <div>
+                    {{form.username.label}}
+                    {{form.username}}
+                </div>
+
+                <ul>
+                    <li>Username and password are case sensitive</li>
+                    <li>Do not add space to your username</li>
+                    <li>Your password can't be too similar to your other personal information.</li>
+                    <li>Your password must contain at least 8 characters.</li>
+                    <li>Your password can't be a commonly used password.</li>
+                    <li>Your password can't be entirely numeric.</li>
+                </ul>
+
+                <div>
+                    {{form.password1.label}}
+                    {{form.password1}}
+                </div>
+                <input type="checkbox" onclick="myFunction()">Show Password
+
+                <div>
+                    <br>
+                    {{form.password2.label}}
+                    {{form.password2}}
+                </div>
+                <input type="checkbox" onclick="myFunction2()">Show Password
+
+
+
+                <p>By creating an account you agree to our <a href="" style="color:dodgerblue">Terms &
+                        Privacy</a>.
+                </p>
+
+                <div class="clearfix">
+                    <a href=""><button type="button" class="cancelbtn">Cancel</button></a>
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+<script src="{% static 'signup.js' %}"></script>
+
+</html>

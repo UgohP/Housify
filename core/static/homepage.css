@@ -1,0 +1,851 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+}
+
+h1 {
+    font-size: 25px;
+    line-height: 64px;
+    color: blue;
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 64px;
+    color: blue;
+}
+
+h4 {
+    font-size: 15px;
+    color: blue;
+}
+
+h6 {
+    font-size: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: blueviolet;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    margin: 20px 20px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+
+
+/* #logo {
+    width: 15%;
+    float: right;
+    object-fit: cover;
+} */
+
+/* .nav-bar {
+    padding: 20px 80px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+} */
+
+nav {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#nav {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#nav li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#left {
+    right: 0;
+}
+
+#nav li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.1s ease;
+    color: blue;
+}
+
+#nav li a:hover,
+#nav li a.active {
+    font-size: 20px;
+    color: navy;
+}
+
+#nav li a.active::after,
+#nav li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: navy;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+*/
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    padding: 0px 5px;
+}
+
+#hero {
+    width: 100%;
+    padding: 10px 20px;
+}
+
+#category {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#category .cat-box {
+    width: 150px;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid blue;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+#category .cat-box:hover {
+    box-shadow: 10px 10px 54px rgba(208, 194, 243, 0.03);
+    background-color: blue;
+
+}
+
+#category .cat-box img {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    height: 100px;
+    object-fit: cover;
+}
+
+#category .cat-box h6 {
+    display: inline-block;
+    font-family: 'Times New Roman';
+    margin-top: 10px;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: white;
+    background-color: blue;
+}
+
+#product1 {
+    text-align: center;
+}
+
+
+#product1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+
+}
+
+#product1 .pro-container a {
+    text-decoration: none;
+}
+
+#product1 .pro {
+    width: 150px;
+    /* max-width: 100px; */
+    padding: 10px 10px;
+    border-radius: 15px;
+    /* margin: 5px 5px; */
+    margin: auto;
+    font-family: arial;
+    transition: 0.2s ease;
+    overflow: auto;
+}
+
+#product .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.6);
+}
+
+#product1 .pro .des {
+    text-align: start;
+    padding: 2px 0 0 0px;
+}
+
+#product1 .pro .des span {
+    color: blue;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+#product1 .pro .des h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+#product1 .pro .des h4 {
+    padding-top: 5px;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+}
+
+.icon {
+    background-color: green;
+    color: white;
+    margin-top: 2px;
+    padding: 10px 0px;
+    border: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 13px;
+}
+
+.icon:hover {
+    background-color: white;
+    color: green;
+}
+
+#blog-icon {
+    background-color: blue;
+    color: white;
+    margin-top: 2px;
+    padding: 10px 0px;
+    border: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 13px;
+}
+
+#icon:hover {
+    background-color: white;
+    color: blue;
+}
+
+#pro_img {
+    width: 100%;
+    /* height: 120px; */
+    object-fit: cover;
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('img/cryto.jpg');
+    width: 100%;
+    height: 65vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner h4 {
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+#banner h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+#crpto-btn {
+    background-color: green;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 14px 20px;
+    margin: 5px 0;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#crpto-btn:hover {
+    color: green;
+    background-color: white;
+}
+
+.banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background: white;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url('img/supermarket1.jpg');
+}
+
+.banner-box h4 {
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    font-style: italic;
+    background: url('img/btn.jpg');
+    border: 1px dotted;
+    padding: 1px 5px;
+}
+
+.banner-box h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: navy;
+}
+
+.banner-box span {
+    color: navy;
+    background-color: white;
+    border: 1px dotted navy;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 2px 0 0 5px;
+}
+
+.banner-box button {
+    background-color: navy;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+
+.banner-box button:hover {
+    color: navy;
+    background-color: white;
+}
+
+.banner-box2 {
+    background: linear-gradient(to top, rgba(234, 233, 241, 0.5)50%, rgba(234, 233, 241, 0.5)50%), url('img/electronics1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.banner-box3 {
+    background-image: url('img/service2.png');
+    background-position: center;
+    background-size: cover;
+}
+
+#banner2 .banner-box3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: white;
+    background-image: url('img/service2.png');
+    min-width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding-left: 5px;
+}
+
+#banner2 h4 {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: italic;
+    background: url('img/btn.jpg');
+    border: 1px dotted;
+    padding: 1px 5px;
+}
+
+#banner2 h1 {
+    color: navy;
+    font-size: 70px;
+    font-weight: 900;
+    padding: 20px;
+}
+
+#banner2 span {
+    color: navy;
+    background-color: white;
+    border: 1px dotted navy;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 2px 0 0 5px;
+}
+
+#banner2 button {
+    background-color: navy;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 14px 20px;
+    margin: 5px 0;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+
+#banner2 button:hover {
+    color: navy;
+    background-color: white;
+}
+
+#banner3 .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(to top, rgba(234, 233, 241, 0.5)50%, rgba(234, 233, 241, 0.5)50%), url('img/about3.png');
+    background-position: center;
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#banner3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+
+#banner3 a {
+    text-decoration: none;
+}
+
+#banner3 h2 {
+    color: #0700c4;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+#banner3 h4 {
+    color: red;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+#banner3 .banner-boxB {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url('img/about.jpg');
+    background-position: center;
+    background-size: cover;
+    /* background-image: url(about.jpg); */
+    /* width: 150%; */
+    align-items: center;
+}
+
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: navy;
+    padding: 30px 100px;
+}
+
+#newsletter h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+
+#newsletter p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #818ea0;
+}
+
+.vendor-btn button {
+    background-color: white;
+    color: navy;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 14px 20px;
+    margin: 5px 0;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+
+.vendor-btn button:hover {
+    color: white;
+    background-color: navy;
+}
+
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+    color: navy;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+    color: navy;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: navy;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+footer a:hover {
+    color: blue;
+    font-size: 15px;
+}
+
+footer .follow {
+    margin-top: 20px;
+}
+
+footer .follow img {
+    padding-right: 4px;
+}
+
+.end {
+    display: flex;
+    justify-content: center;
+}
+
+.overlay .closebtn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #818181;
+}
+
+@media (max-width:799px) {
+    #nav {
+        position: relative;
+        top: 25%;
+        /* 25% from the top */
+        width: 100%;
+        /* 100% width */
+        text-align: center;
+        /* Centered text/links */
+        margin-top: 30px;
+        display: block;
+        /* 30px top margin to avoid conflict with the close button on smaller screens */
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        display: block;
+        /* Display block instead of inline */
+        transition: 0.3s;
+        /* Transition effects on hover (color) */
+    }
+
+
+    .container {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 25px;
+        height: 0.2px;
+        background-color: navy;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    /* Rotate first bar */
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    /* Fade out the second bar */
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    /* Rotate last bar */
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    /* The Overlay (background) */
+    .overlay {
+        /* Height & width depends on how you want to reveal the overlay (see JS below) */
+        height: 100%;
+        width: 0;
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        background-color: rgb(0, 0, 0);
+        /* Black fallback color */
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Black w/opacity */
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    }
+
+    .overlay #nav li a {
+        color: #818181;
+        font-size: 25px;
+        text-decoration: none;
+        padding: 20px;
+    }
+
+    .overlay #nav li a:hover,
+    .overlay #nav li a.active {
+        color: blue;
+        font-size: 30px;
+    }
+
+    /* Position the close button (top right corner) */
+    .overlay .closebtn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+        color: #818181;
+    }
+
+    .overlay .closebtn:hover {
+        color: blue;
+    }
+}
+
+
+
+/* Style the tab */
+.tab {
+    color: navy;
+    background-color: lightblue;
+    width: 100%;
+}
+
+.tab a {
+    text-decoration: none;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    text-align: center;
+    display: block;
+    background-color: inherit;
+    color: navy;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 22px 3px;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+/* Create an active/current "tab button" class */
+.tab button:hover,
+.tab button.active {
+    background-color: navy;
+    color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+    padding: 0px 5px;
+    width: 70%;
+    margin-left: 22%;
+    border-left: none;
+    top: 0;
+}
+
+.vendor-id {
+    display: flex;
+    align-items: center;
+}
+
+.vendor-id img {
+    max-width: 100px;
+    margin-right: 10px;
+}
+
+.vendor-id h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+#index {
+    background-color: blue;
+    color: white;
+    margin-top: 2px;
+    padding: 10px 0px;
+    border: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 13px;
+}
+
+#index:hover {
+    background-color: white;
+    color: blue;
+}
+
+
+.search {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+#filter {
+    align-items: center;
+    /* position: relative; */
+    /* justify-content: space-between; */
+    background-color: grey;
+}
+
+/* .search button {
+    float: right;
+    width: 30%;
+    border: none;
+    margin-top: 5px;
+} */
+
+/* Style the submit button */
+.search button {
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background: blue;
+    color: white;
+    font-size: 17px;
+    border: 1px solid white;
+    /* border-left: none; */
+    /* Prevent double borders */
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+/* Clear floats */
+/* .search::after {
+    content: "";
+    clear: both;
+    display: table;
+} */
+
+label {
+    color: white;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+select {
+    width: 98%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+select:focus {
+    background-color: #ddd;
+    outline: none;
+}

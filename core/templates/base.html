@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    {% block meta%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="BlueMartin Technology">
+
+    <!-- Open Graph meta tags for social sharing (example) -->
+    {%endblock%}
+    <title>{%block title%}{% endblock%} | Housify</title>
+    <link rel="stylesheet" href="{% static 'homepage.css' %}">
+
+    <!-- Favicon (icon in the browser tab) -->
+    <link rel="icon" type="image/png" href="{% static 'img/blue.png'%}">
+</head>
+
+<body>
+    <nav>
+        <div class="container" onclick="openNav()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <div id="myNav" class="overlay">
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <ul id="nav">
+                <li><a href="{% url 'homepage' %}">HOUSIFY</a></li>
+                <li><a href="">Categories</a></li>
+                <li><a href="">Blogs</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="">Profile</li></a>
+                {% if request.user.customer.is_vendor %}
+                <li><a href="">Vendor</li></a>
+                {%else%}
+                <li><a href="">Be a Vendor</li></a>
+                {% endif %}
+                <li><a href="{% url 'logout'%}">Logout</a></li>
+                {% else %}
+                <li><a href="{% url 'login'%}">Login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+    {% block content%}
+
+    {% endblock %}
+    <script src="{% static 'index.js' %}"></script>
+</body>
+
+</html>
