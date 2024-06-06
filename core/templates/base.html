@@ -32,6 +32,8 @@
             <ul id="nav">
                 <li><a href="{% url 'homepage' %}">HOUSIFY</a></li>
                 <li><a href="{% url 'categories' %}">Categories</a></li>
+                <li><a href="{% url 'categories' %}">About</a></li>
+                <li><a href="{% url 'categories' %}">Contact</a></li>
                 {% if user.is_authenticated %}
                 <li><a href="{% url 'customer' %}">Profile</li></a>
                 {% if request.user.customer.is_vendor %}

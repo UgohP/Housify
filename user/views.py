@@ -49,12 +49,12 @@ def loginPage(request):
 
             if user is not None:
                 login(request, user)
-                if SecurityQuestion.DoesNotExist:
-                    print('not')
-                    return redirect('security_questions')
-                else:
-                    print('done')
-                    return redirect('vendor_profile')
+                # if SecurityQuestion.DoesNotExist:
+                #     print('not')
+                #     return redirect('security_questions')
+                # else:
+                #     print('done')
+                #     return redirect('vendor_profile')
             else:
                 messages.info(request, 'Username or password is incorrect') 
 
