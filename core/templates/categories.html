@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{%block title%}Categories{%endblock%}
+{%load static%}
+
+    {% block content %}
+    <div>
+        <div class="tab">
+            <hr>
+            <a href=""><button class="tablinks">Bungalow</button></a>
+            <hr>
+            <a href=""><button class="tablinks">Duplex</button></a>
+            <hr>
+            <a href=""><button class="tablinks">Story Buiding</button></a>
+            <hr>
+            <a href=""><button class="tablinks">Hotel & Apartments</button></a>
+            <hr>
+            <a href=""><button class="tablinks">Room Mate</button></a>
+            <hr>
+            <a href=""><button class="tablinks">Other</button></a>
+            <hr>
+            <a href="{% url 'homepage' %}" style="text-decoration: none;"><button class="tablinks">Back to Homepage</button>
+            </a>
+            <hr>
+    
+        </div>
+    </div>
+    {% endblock %}

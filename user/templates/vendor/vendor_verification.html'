@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'vendor_application.css' %}">
+    <title>Vendor Application | Housify</title>
+    <!-- Favicon (icon in the browser tab) -->
+    <link rel="icon" type="image/png" href="{% static 'img/blue.png'%}">
+
+</head>
+
+<body>
+    <div id="header">
+
+        <h3 style="color: blue;"><b>Verification</b></h3>
+        <img style="width: 10%;" src="{% static 'img/blue.png'%}" alt="Logo" />
+    </div>
+    <hr class="hr">
+
+    <a href="{% url 'home'%}"><input type="submit" value="HomePage"></a>
+    <hr class="hr">
+    <form action="" method="post" enctype="multipart/form-data">
+        <div class="section-p1">
+            <h3>Verification</h3>
+        </div>
+        <hr>
+        <h3 style="color: blue;"><b>Vendor Verification</b></h3>
+        {% csrf_token%}
+        {{form.as_p}}
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+
+</html>

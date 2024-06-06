@@ -117,13 +117,8 @@ class Vendor(models.Model):
     vendor_email = models.EmailField(blank=True)
     vendor_phone_number1 = models.BigIntegerField(null=True)
     vendor_phone_number2 = models.BigIntegerField(null=True, blank=True)
+    business_whatsapp_number = models.BigIntegerField(null=True)
     date_joined = models.DateTimeField(auto_now_add=True)
-    slug = models.SlugField(null=True, blank=True)
-
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.business_name)
-        super(Vendor,self).save(*args, **kwargs)
-
 
     def __str__(self):
         return str(self.vendor)

@@ -1,0 +1,31 @@
+{% extends 'vendor/vendor_base.html'%}
+{%load static%}
+{% block title%}Vendor's Page{%endblock%}
+{%block meta%}
+<!-- Open Graph meta tags for social sharing (example) -->
+<meta property="og:title" content="BlueMartin">
+<meta property="og:description" content="{{vendor.business_name|capfirst}}">
+{%if vendor.business_logo_if_any%}
+<meta property="og:image" content="{{vendor.imageURL}}">
+{%endif%}
+<meta property="og:url" content="https://bluemartin.ng">
+{%endblock%}
+
+<!-- Favicon (icon in the browser tab) -->
+<link rel="icon" type="image/png" href="{% static 'img/blue.png'%}">
+{% block content%}
+
+<div class="tab">
+    <a href="{% url 'vendor_profile' %}"><button class="tablinks"
+            onclick="openCity(event, 'vendor_profile')">Profile</button></a>
+    <hr>
+    <a href="{% url 'history'  %}"><button class="tablinks">Product</button></a>
+    <a href="{% url 'homepage' %}"><button>Homepage</button></a>
+    <hr>
+    <a href="{% url 'logout'%}">
+        <button>logout</button>
+    </a>
+    <hr>
+</div>
+
+{% endblock %}

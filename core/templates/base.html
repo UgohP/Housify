@@ -31,14 +31,13 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <ul id="nav">
                 <li><a href="{% url 'homepage' %}">HOUSIFY</a></li>
-                <li><a href="">Categories</a></li>
-                <li><a href="">Blogs</a></li>
+                <li><a href="{% url 'categories' %}">Categories</a></li>
                 {% if user.is_authenticated %}
-                <li><a href="">Profile</li></a>
+                <li><a href="{% url 'customer' %}">Profile</li></a>
                 {% if request.user.customer.is_vendor %}
-                <li><a href="">Vendor</li></a>
+                <li><a href="{% url 'vendor' %}">Vendor</li></a>
                 {%else%}
-                <li><a href="">Be a Vendor</li></a>
+                <li><a href="{% url 'vendor_application' %}">Be a Vendor</li></a>
                 {% endif %}
                 <li><a href="{% url 'logout'%}">Logout</a></li>
                 {% else %}

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'signup.css' %}">
-    <title>Sign_up | BlueMartin</title>
+    <title>Sign_up | Housify</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,11 +29,11 @@
 <body>
     <!-- The Modal (contains the Sign Up form) -->
     <div id="id01" class="modal">
-        <span class="close" title="close"><a href="">&times;</a></span>
+        <span class="close" title="close"><a href="{% url 'login'%}">&times;</a></span>
         <form method="POST" class="modal-content animate" action="">
             {% csrf_token%}
             <div class="container">
-                <img id="logo" src="{% static 'img/blue.png' %}" alt="Logo" width="15%" />
+                <h1 id="logo">Housify </h1>
                 <h1>Sign Up</h1>
                 <p>Please fill in this form to create an account.</p>
                 <hr>

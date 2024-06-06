@@ -36,5 +36,50 @@
 </section>
 
 <br>
+
+<hr style="border: ridge blue;"> <br>
+
+<center>
+    <h2>CATEGORIES</h2>
+</center>
+<section id="category" class="section-p1">
+    {% for category in category %}
+    <a href="{% url 'categories' %}">
+        <div class="cat-box">
+            <img id="cat-img" src="{{category.category_image.url}}" alt="Avatar">
+            <h6><b>{{category.category_name}} </b></h6>
+        </div>
+    </a>
+    {% endfor %}
+</section>
+
+
+<hr style="border: ridge blue;"><br>
+<section id="product1" class="section-p1">
+    <h2> Featured Products</h2>
+    <p>HIGHLIGHTS ON SOME PRODUCTS</p>
+
+    <div class="pro-container">
+        {% for product in product %}
+        <a href="">
+            <div class="pro">
+                <img id="pro_img" src="{{product.imageURL}}" alt="product image">
+                <div class="des">
+                    <a
+                        href=""><span>{{product.created_by.business_name|title}}</span></a>
+                    <h5>{{product.product_name|title}}</h5>
+                    <h4>&#8358 {{product.price}} <span>({{product.haggle}})</span></h4>
+                </div>
+                <a href="https://wa.me/{{product.created_by.business_whatsapp_number}}"><button class="icon">
+                        <h6>Chat on WhatsApp</h6>
+                    </button></a>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+<hr style="border: ridge blue;"><br>
+
+
 <script src="{% static 'index.js' %}"></script>
 {% endblock%}

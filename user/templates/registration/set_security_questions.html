@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <title>Set Security Question | Housify</title>
+    <!-- Favicon (icon in the browser tab) -->
+    <link rel="icon" type="image/png" href="{% static 'img/blue.png'%}">
+
+</head>
+
+<body>
+
+
+    <!-- The Modal -->
+    <div id="id01" class="modal">
+
+        <!-- Modal Content -->
+        <form method="POST" class="modal-content animate" action="">
+            {% csrf_token %}
+            <div class="imgcontainer">
+                <img src="{% static 'img/blue.png' %}" alt="Avatar" class="avatar">
+            </div>
+            <center>
+                <h2>SET SECURITY QUESTION</h2>
+            </center>
+            <div class="danger">
+                <center>
+                    {{form.answer2.errors}}
+
+                </center>
+            </div>
+
+            <div class="container">
+                <h2>Security Question: {{ security_question.queston2}}</h2>
+                <br>
+                <label for="id_answer2">What is your favourite color (answer should be in lowercase):</label>
+                <input type="text" name="answer2" id="id_answer2" value="{{ security_question.answer2}}" required>
+
+                <button type="submit">Save</button>
+                <a href="{% url 'customer'%}"><button style="background-color: red;" type="button">Cancel</button></a>
+
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

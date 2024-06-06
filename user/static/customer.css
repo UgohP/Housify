@@ -1,0 +1,214 @@
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: 0px 10px; */
+}
+
+#header h5 {
+    font-weight: 900;
+    color: blue;
+}
+
+#header img {
+    width: 20%;
+}
+
+* {
+    box-sizing: border-box
+}
+
+/* Style the tab */
+.tab {
+    color: navy;
+    background-color: lightblue;
+    width: 100%;
+}
+
+.tab a {
+    text-decoration: none;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    text-align: center;
+    display: block;
+    background-color: inherit;
+    color: navy;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 22px 3px;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+/* Create an active/current "tab button" class */
+.tab button:hover,
+.tab button.active {
+    background-color: navy;
+    color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+    padding: 0px 5px;
+    margin: 20px 20px;
+    border-left: none;
+}
+
+/* Full-width input fields */
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=text],
+input[type=option] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+#descripton {
+    height: 50vh;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+input[type=submit] {
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.85;
+    float: left;
+}
+
+
+/* Set a style for all buttons */
+.createbtn,
+.backbtn {
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.85;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+/* Extra styles for the cancel button */
+.backbtn {
+    padding: 14px 20px;
+    background-color: green;
+}
+
+.backbtn a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.backbtn,
+.createbtn {
+    float: left;
+    width: 50%;
+}
+
+
+input[type=submit]:hover {
+    opacity: 1;
+}
+
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    margin-left: 22%;
+}
+
+
+
+
+.pro-container {
+    display: flex;
+    justify-content: space-between;
+    /* padding-top: 20px; */
+    flex-wrap: wrap;
+
+}
+
+.pro-container a {
+    text-decoration: none;
+}
+
+.pro-container .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 20px 50px;
+    border-radius: 15px;
+    margin: 15px 0px;
+    margin: auto;
+    font-family: arial;
+    transition: 0.2s ease;
+}
+
+.pro-container .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.6);
+}
+
+.pro-container .pro .des {
+    text-align: start;
+    padding: 2px 0 0 0px;
+}
+
+.pro-container .pro .des span {
+    color: lightblue;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.pro-container.pro .des h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+.pro-container .pro .des h4 {
+    padding-top: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0700c4;
+}
+
+#pro_img {
+    width: 80%;
+}
+
+
+.message {
+    background-color: lightblue;
+    border-left: 6px solid #0000ff;
+}

@@ -1,0 +1,52 @@
+{% extends 'vendor/vendor_base.html'%}
+{%load static%}
+{%block title%}{{request.user.vendor.business_name}}'s Profile{%endblock%}
+
+{% block meta %}
+<!-- Open Graph meta tags for social sharing (example) -->
+<meta property="og:title" content="BlueMartin">
+<meta property="og:description" content="{{vendor.business_name|capfirst}}">
+{%if vendor.business_logo_if_any%}
+<meta property="og:image" content="{{vendor.imageURL}}">
+{%endif%}
+<meta property="og:url" content="https://bluemartin.ng/{% url 'vendor_profile' %}">
+{%endblock%}
+
+{% block content %}
+<div class="clearfix">
+    <a href="{% url 'vendor' %}"><button type="button" class="backbtn">Go Back</button></a>
+    <a href="{% url 'homepage'%}"><button type="submit" class="createbtn">HomePage</button></a>
+</div>
+<br>
+<br>
+<div class="message">
+    <center>
+        {% for message in messages %}
+        <strong>
+            <p>{{message}}</p>
+        </strong>
+        {% endfor %}
+    </center>
+</div>
+
+<center>
+    <h3><i>Your Profile</i></h3>
+<div class="card">
+    <img src="{{request.user.vendor.imageURL}}" alt='No Picture' style="width:100%">
+</div>
+</center>
+
+    <div id="vendor_profile" class="tabcontent">
+        <div>
+            <form method="post" id="form" action="" enctype="multipart/form-data">
+                {% csrf_token%}
+                {{form.as_p}}
+
+                <input type="submit">
+                <a href="{% url 'homepage' %}">
+                </a>
+            </form>
+
+        </div>
+    </div>
+{% endblock%}

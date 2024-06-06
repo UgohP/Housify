@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core', #the base page
     'user', #app for user authentication
+    'product' #app for the accomodation product
 ]
 
 MIDDLEWARE = [
@@ -102,6 +103,12 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
+MEDIA_URL = 'media/'
+
+# MEDIA_ROOT = BASE_DIR / 'image'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
@@ -112,6 +119,12 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+
+LOGIN_REDIRECT_URL = 'customer_profile'
+
+LOGOUT_REDIRECT_URL = 'login'
+PASSWORD_CHANGE_DONE_URL = 'customer_profile'
 
 
 # Static files (CSS, JavaScript, Images)

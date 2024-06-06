@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'vendor.css'%}">
+    <title>{%block title%}{%endblock%} | Housify</title>
+
+    {% block meta%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Are you a an online vendor, or someone offering valuable services such as
+    electrician work, hair dressing, tailoring, and more? Buy and Sell on BlueMartin; join our vibrant commumity at BlueMartin and showcase
+    your goods and services to a wide audience. Visit the BlueMartin Technology Online Vendor Website to experience a seamless online shopping
+    experience. ">
+    <meta name="keywords" content="Buy and Sell on BlueMartin">
+    <meta name="author" content="BlueMartin Technology">
+    {%endblock%}
+
+    <!-- Favicon (icon in the browser tab) -->
+    <link rel="icon" type="image/png" href="{% static 'img/blue.png'%}">
+</head>
+
+<body>
+    <div id="header">
+        <h4 style="color: blue;">Welcome {{request.user|capfirst}}!</h4>
+        <img style="width: 10%;" src="{% static 'img/blue.png'%}" alt="Logo" />
+    </div>
+    <hr class="hr">
+    {% block content%}
+    {%endblock%}
+</body>
+
+</html>

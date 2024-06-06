@@ -1,0 +1,35 @@
+{% extends 'customer/customer_base.html'%}
+
+    
+{%block title%}{{request.user.customer}}'s Profile{%endblock%}
+{% block content %}
+<div class="clearfix">
+    <a href="{% url 'customer' %}"><button type="button" class="backbtn">Go Back</button></a>
+    <a href="{% url 'homepage'%}"><button type="submit" class="createbtn">HomePage</button></a>
+</div>
+
+<div id="profile" class="tabcontent">
+    <br><br>
+    <div class="message">
+        <center>
+            {% for message in messages %}
+            <strong>
+                <p>{{message}}</p>
+            </strong>
+            {% endfor %}
+        </center>
+    </div>
+
+    <div>
+        <form method="post" id="form">
+            {% csrf_token%}
+            {{form.as_p}}
+
+            <input type="submit">
+            <a href="{% url 'homepage' %}">
+            </a>
+            
+        </form>
+       
+    </div>
+    {%endblock%}

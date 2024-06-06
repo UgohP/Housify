@@ -1,0 +1,283 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+}
+
+/* Set a style for all buttons */
+.createbtn,
+.backbtn {
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.85;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+/* Extra styles for the cancel button */
+.backbtn {
+    padding: 14px 20px;
+    background-color: green;
+}
+
+.backbtn a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.backbtn,
+.createbtn {
+    float: left;
+    width: 50%;
+}
+
+
+/* Style the tab */
+.new_sale {
+    background-color: blue;
+    width: 100%;
+}
+
+.new_sale a {
+    text-decoration: none;
+}
+
+/* Style the buttons that are used to open the tab content */
+.new_sale button {
+    text-align: center;
+    display: block;
+    background-color: inherit;
+    color: white;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 22px 3px;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+/* Create an active/current "tab button" class */
+.new_sale button:hover,
+.new_sale button.active {
+    background-color: na;
+    color: white;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 10px;
+}
+
+
+/* Style the tab */
+.tab {
+    color: navy;
+    background-color: lightblue;
+    width: 100%;
+}
+
+.tab a {
+    text-decoration: none;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    text-align: center;
+    display: block;
+    background-color: inherit;
+    color: navy;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 22px 3px;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+/* Create an active/current "tab button" class */
+.tab button:hover,
+.tab button.active {
+    background-color: navy;
+    color: white;
+}
+
+
+#product1 {
+    text-align: center;
+}
+
+#product1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    /* padding-top: 20px; */
+    flex-wrap: wrap;
+
+}
+
+#product1 .pro-container a {
+    text-decoration: none;
+}
+
+#product1 .pro {
+    width: 150px;
+    /* max-width: 100px; */
+    padding: 10px 10px;
+    border-radius: 15px;
+    /* margin: 5px 5px; */
+    margin: auto;
+    font-family: arial;
+    transition: 0.2s ease;
+}
+
+#product .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.6);
+}
+
+#product1 .pro .des {
+    text-align: start;
+    /* padding: 2px 0 0 0px; */
+}
+
+#product1 .pro .des span {
+    color: blue;
+    font-size: 8px;
+    font-weight: bold;
+}
+
+#product1 .pro .des h5 {
+    /* padding-top: 5px; */
+    color: #1a1a1a;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+#product1 .pro .des h4 {
+    /* padding-top: 5px; */
+    font-size: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+#icon {
+    background-color: green;
+    color: white;
+    margin-top: 2px;
+    padding: 10px 0px;
+    border: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 13px;
+}
+
+#icon:hover {
+    background-color: white;
+    color: green;
+}
+
+#pro_img {
+    width: 100%;
+    /* height: 120px; */
+    object-fit: cover;
+}
+
+
+
+/* Style the tab content */
+.tabcontent {
+    padding: 0px 5px;
+    margin: 20px 20px;
+    border-left: none;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+select {
+    width: 98%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#descripton {
+    height: 50vh;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+select:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+
+input[type=submit] {
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+
+
+form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+#delete,
+#update {
+    float: left;
+    width: 50%;
+}
+
+#delete {
+    background-color: red;
+    color: white;
+}
+
+#update {
+    background-color: blue;
+    color: white;
+}
+
+
+.message {
+    background-color: lightblue;
+    border-left: 6px solid #0000ff;
+}

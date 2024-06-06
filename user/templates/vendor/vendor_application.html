@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'vendor_application.css' %}">
+    <title>Vendor Application | BlueMartin</title>
+
+    {% block meta%}
+    <meta name="description" content="Are you a an online vendor, or someone offering valuable services such as
+    electrician work, hair dressing, tailoring, and more? Buy and Sell on BlueMartin; join our vibrant commumity at BlueMartin and showcase
+    your goods and services to a wide audience. Visit the BlueMartin Technology Online Vendor Website to experience a seamless online shopping
+    experience. ">
+    <meta name="keywords" content="Buy and Sell on BlueMartin">
+    <meta name="author" content="BlueMartin Technology">
+
+    <!-- Open Graph meta tags for social sharing (example) -->
+    <meta property="og:title" content="BlueMartin">
+    <meta property="og:description" content="Are you a an online vendor, or someone offering valuable services such as
+electrician work, hair dressing, tailoring, and more? Buy and Sell on BlueMartin; join our vibrant commumity at BlueMartin and showcase
+your goods and services to a wide audience. Visit the BlueMartin Technology Online Vendor Website to experience a seamless online shopping
+experience.">
+    <meta property="og:image" content="{% static 'img/blue.png'%}">
+    <meta property="og:url" content="https://bluemartin.ng/{% url 'vendor_application' %}">
+    {%endblock%}
+
+    <!-- Favicon (icon in the browser tab) -->
+    <link rel="icon" type="image/png" href="{% static 'img/blue.png'%}">
+</head>
+
+<body>
+    <div id="header">
+
+        <h3 style="color: blue;"><b>Sell on BlueMartin </b></h3>
+        <img style="width: 10%;" src="{% static 'img/blue.png'%}" alt="Logo" />
+    </div>
+    <hr class="hr">
+
+    <a href="{% url 'homepage'%}"><input type="submit" value="HomePage"></a>
+    <hr class="hr">
+    <form action="" method="post">
+        <div class="section-p1">
+        <hr>
+        <h3 style="color: blue;"><b>Vendor Application Form</b></h3>
+        {% csrf_token%}
+        {{form.as_p}}
+        
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+{% extends 'customer/customer_base.html'%}
+
+
+
+{% block title%}Customer's Page{%endblock%}
+
+
+{% block content%}
+<div class="tab">
+    <a href="{% url 'customer_profile' %}"><button class="tablinks">Profile</button></a>
+    {% if request.user.customer.in_process %}
+    <hr>
+    <a href="{% url 'verifying'  %}"><button class="tablinks">Vendor Verification</button></a>
+    {%endif%}
+    {% if request.user.customer.is_vendor %}
+    <hr>
+    <a href="{% url 'vendor'%}"><button class="tablinks">Go To Vendor Profile</button></a>
+    {%else%}
+    <hr>
+    <a href="{% url 'vendor_application' %}"><button class="tablinks">Be A Vendor</button></a>
+    {%endif%}
+    <hr>
+    <a href="{% url 'change_password' %}"><button class="tablinks">Change Password</button></a>
+    <hr>
+    <a href="{% url 'security_questions'  %}"><button class="tablinks">Set Security Questions</button></a>
+    <hr>
+    <a href="{% url 'homepage' %}"><button>Homepage</button></a>
+    <hr>
+    <a href="{% url 'logout'%}">
+        <button>logout</button>
+    </a>
+    <hr>
+</div>
+
+{% endblock %}

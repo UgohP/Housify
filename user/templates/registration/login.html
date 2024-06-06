@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'login.css' %}">
-    <title>Login | BlueMartin</title>
+    <title>Login | Housify</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,10 +17,7 @@
     <meta name="author" content="BlueMartin Technology">
 
     <!-- Open Graph meta tags for social sharing (example) -->
-    <meta property="og:title" content="BlueMartin">
-    <meta property="og:description" content="BlueMartin Website: Your one-stop online vendor for electronics, fashion, food, and more. Explore a wide range of products and services on bluemartin.ng powered by BlueMartin Technology.">
-    <meta property="og:image" content="{% static 'img/blue.png'%}">
-    <meta property="og:url" content="https://bluemartin.ng">
+
     <!-- Favicon (icon in the browser tab) -->
     <link rel="icon" type="image/png" href="{% static 'img/blue.png'%}">
 
@@ -36,7 +33,7 @@
         <form method="POST" class="modal-content animate" action="">
             {% csrf_token %}
             <div class="imgcontainer">
-                <img src="{% static 'img/blue.png' %}" alt="Avatar" class="avatar">
+                <h1>Housify</h1>
             </div>
 
             <br>
@@ -69,7 +66,7 @@
                     
                     <h4 style="color: blue;">Don't have an account? <a href="{% url 'signup'%}">Sign Up Here</a></h4>
 
-                    <h4><a href="">Forgot Password?</a></h4>
+                    <h4><a href="{% url 'reset_password' %}">Forgot Password?</a></h4>
                 </center>
             </div>
 
