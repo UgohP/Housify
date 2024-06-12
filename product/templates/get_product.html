@@ -1,0 +1,90 @@
+{% extends 'index.html'%}
+
+{%block title%}{{product.product_name|title}}{%endblock%}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'product.css'%}">
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+  <center>
+    <!-- Full-width images with number and caption text -->
+    {% if product.imageURL %}
+    <div class="mySlides">
+      <img src="{{product.imageURL}}" style="width:50%">
+    </div>
+    {%endif%}
+
+    {% if product.image2URL %}
+    <div class="mySlides">
+      <img src="{{product.image2URL}}" style="width:50%">
+    </div>
+    {%endif%}
+
+    {% if product.image3URL %}
+    <div class="mySlides">
+      <img src="{{product.image3URL}}" style="width:50%">
+    </div>
+    {%endif%}
+
+    {% if product.image4URL %}
+    <div class="mySlides">
+      <img src="{{product.image4URL}}" style="width:50%">
+    </div>
+    {%endif%}
+
+    {% if product.image5URL %}
+    <div class="mySlides">
+      <img src="{{product.image5URL}}" style="width:50%">
+    </div>
+    {%endif%}
+  </center>
+
+
+  <!-- Next and previous buttons -->
+  {% if product.image2URL %}
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  {%endif%}
+
+</div>
+<div class="text">{{product.product_name|title}}</div>
+<br>
+<br>
+<table>
+  <tr>
+    <th>Product Name:</th>
+    <td>{{product.product_name|title}}</td>
+  </tr>
+  <tr>
+    <th>Gender:</th>
+    <td>{{product.gender|title}}</td>
+  </tr>
+  <tr>
+    <th>Price:</th>
+    <td>&#8358 {{product.price}}</td>
+  </tr>
+  <tr>
+    <th>Haggle:</th>
+    <td>{{product.haggle|capfirst}}</td>
+  </tr>
+  <tr>
+    <th>Description:</th>
+    <td>{{product.description}}</td>
+  </tr>
+  <tr>
+    <th>Vendor:</th>
+      <td>{{product.created_by.business_name|title}}</td>
+    </tr>
+</table>
+<a href="https://wa.me/{{product.created_by.business_whatsapp_number}}"><input class="input" type="submit"
+    value="Chat On WhatsApp"></a>
+
+
+
+<script src="{% static 'product.js'%}"></script>
+</body>
+
+</html>
+{%endblock%}

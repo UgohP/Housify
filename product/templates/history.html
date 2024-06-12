@@ -1,0 +1,43 @@
+{% extends 'vendor/vendor_base.html'%}
+{%block title%}History{%endblock%}
+{% block content %}
+<div class="clearfix">
+    <a href="{% url 'vendor' %}"><button type="button" class="backbtn">Go Back</button></a>
+    <a href="{% url 'create_product'%}"><button type="submit" class="createbtn">Create New Sale</button></a>
+</div>
+<br>
+<div id="history" class="tabcontent">
+    <br>
+    <div class="message">
+        <center>
+            {% for message in messages %}
+            <strong><p>{{message}}</p></strong>
+            {% endfor %}
+        </center>
+      </div>
+      
+        <section id="product1" class="section-p1">
+            <h2> Your Products</h2>
+        
+            <div class="pro-container">
+                {% for product in product %}
+                <a href="">
+                    <div class="pro">
+                        <img id="pro_img" src="{{product.imageURL}}" alt="product image">
+                        <div class="des">
+                            <a href=""><span>{{product.created_by.business_name|title}}</span></a>
+                            <h5>{{product.product_name|title}}</h5>
+                            <h4>&#8358 {{product.price}} <span>({{product.haggle}})</span></h4>
+                        </div>
+                        <a href="{% url 'update_product' product.id %}"><button id="update">update</button></a>
+                        <a href="{% url 'delete_product' product.id %}"><button id="delete">delete</button></a>
+        
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+        
+</div>
+
+{% endblock%}

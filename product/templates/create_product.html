@@ -1,0 +1,16 @@
+{% extends 'vendor/vendor_base.html'%}
+{%block title%}Create New Sale{%endblock%}
+{% block content %}
+<div id="create_product" class="tabcontent">
+    <div>
+        <form method="post" id="form" action="" enctype="multipart/form-data">
+            {% csrf_token%}
+            {{form.as_p}} 
+            <input type="submit" value="Create">
+        </form>
+        <a href="{% url 'history'%}"><input type="submit" value="Cancel" style="background-color: red;"></a>
+
+
+    </div>
+</div>
+{% endblock%}

@@ -9,13 +9,30 @@ from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.views.generic import ListView
 from django.views.generic.edit import *
+from core.models import Categorie
 
 # Create your views here.
 
-def product(request, prod):
-    context = {}
+# def product(request, prod):
+#     context = {}
     
-    return render(request, 'product.html', context)
+#     return render(request, 'product.html', context)
+
+def product(request, pk):
+    category = Categorie.objects.get(category_name=pk)
+    product = Product.objects.filter(category=category)
+    context = {'product':product}
+    
+    return render(request, 'fashion.html', context)
+
+def getProduct(request, pk):
+    product = Product.objects.get(id=pk)
+
+    context = {'product':product}
+
+    return render(request, 'get_product.html', context) 
+
+
 
 def createProduct(request):
     if request.method == 'POST':

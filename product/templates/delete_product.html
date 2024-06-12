@@ -1,0 +1,26 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'blog.css' %}">
+<div>
+    <center>
+        {% for message in messages %}
+        <p>{{message}}</p>
+        {% endfor %}
+    </center>
+    <div id="id01" class="modal">
+        <span class="close" title="Close Modal">&times;</span>
+
+        <form class="modal-content" action="{% url 'delete_product' product.id %}" method="post">
+            {% csrf_token%}
+            <div class="container">
+                <h1>Delete Product</h1>
+                <br>
+                <h2 class="danger">Are you sure you want to delete <strong>{{product.product_name}}</strong>?</h2>
+                <!-- <input type="submit" value="Yes"> -->
+                <div>
+                    <input type="submit" class="deletebtn button" value="Delete">
+                </div>
+        </form>
+        <a href="{% url 'history' %}"><button type="button" class="cancelbtn button">Cancel</button></a>
+    </div>
+</div>
+</div>

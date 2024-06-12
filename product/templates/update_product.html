@@ -1,0 +1,26 @@
+{% extends 'vendor/vendor_base.html'%}
+{%block title%}Update Product{%endblock%}
+
+{% block content %}
+<div class="tabcontent">
+    <div>
+        <center>
+            {% for message in messages %}
+            <p>{{message}}</p>
+            {% endfor %}
+        </center>
+        <div>
+            <form method="post" id="form" action="" enctype="multipart/form-data">
+                {% csrf_token%}
+                {{form.as_p}}
+
+                <input type="submit" value="update">
+            </form>
+        <a href="{% url 'history'%}"><input type="submit" value="Cancel" style="background-color: red;"></a>
+
+        </div>
+    </div>
+
+
+{% endblock%}
+

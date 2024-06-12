@@ -55,13 +55,43 @@
 
 
 <hr style="border: ridge blue;"><br>
+
+<section class="section-p1">
+<center>
+    <h1>FEATURES</h1>
+</center>
+
+    <button class="accordion">Find Your Perfect Home</button>
+    <div class="panel">
+        <p>Browse through our extensive listings of homes for rent or sale. Our platform offers a variety of options to fit your
+        needs, from cozy apartments to spacious houses. Each listing comes with detailed descriptions, high-quality images, and
+        user reviews to help you make an informed decision.</p>
+    </div>
+    
+    <button class="accordion">Verified Vendors</button>
+    <div class="panel">
+        <p>All vendors on Housify go through a stringent verification process to ensure their credibility. This means you can trust
+        that the properties listed on our site are genuine and accurately represented. Our verification process includes
+        background checks, property inspections, and user feedback.</p>
+    </div>
+    
+    <button class="accordion">Easy Profile Management</button>
+    <div class="panel">
+        <p>Our user-friendly interface allows both vendors and customers to manage their profiles with ease. Vendors can upload
+            new property listings, manage existing ones, and interact with potential tenants or buyers. Customers can save their
+            favorite listings, schedule viewings, and communicate directly with vendors.</p>
+    </div>
+</section>
+
+<hr style="border: ridge blue;"><br>
+
 <section id="product1" class="section-p1">
     <h2> Featured Products</h2>
     <p>HIGHLIGHTS ON SOME PRODUCTS</p>
 
     <div class="pro-container">
         {% for product in product %}
-        <a href="">
+        <a href="{% url 'get_product' product.id%}">
             <div class="pro">
                 <img id="pro_img" src="{{product.imageURL}}" alt="product image">
                 <div class="des">
@@ -79,6 +109,70 @@
     </div>
 </section>
 <hr style="border: ridge blue;"><br>
+<center>
+    <h1>SOME OF OUR HOUSES</h1>
+</center>
+
+<div class="bg-image img1"></div>
+<div class="bg-image img2"></div>
+<div class="bg-image img3"></div>
+<div class="bg-image img4"></div>
+<div class="bg-image img5"></div>
+<div class="bg-image img6"></div>
+
+<hr style="border: ridge blue;"><br>
+
+
+<section>
+    <div class="banner-box banner-box3">
+        <h4>Your home away from home......</h4>
+        <h2 style="color: white;">Housify</h2>
+        <span>Bungalow, Duplex, Story Buildings, Room Mate, Hotels and Apartments......</span>
+        <a href=""><button>Click Here</button></a>
+    </div>
+</section>
+<hr style="border: ridge blue;"><br>
+
+<footer class="section-p1">
+    <div id="footer">
+        <div class="col">
+            <h4>Contact</h4>
+            <p><strong>Phone:</strong> 08157981821, 09032115646</p>
+
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="social-icon">
+                    <a href="https://wa.me/08157981821">WhatsApp</a>
+                    <a href="https://instagram.com/bluemartintech">Instagram</a>
+                    <a href="https://x.com/bluemartintech">X</a>
+                    <a href="https://linkedin.com/in/ugohpaschal">Linkedin</a>
+                    <a href="https://github.com/UgohP">Github</a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="">About Us</a>
+            <a href="">Our Services</a>
+            <a href="">Be A Vendor</a>
+            <a href="">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="">Login</a>
+            <a href="">Sign In</a>
+            <a href="">Help</a>
+        </div>
+    </div>
+
+</footer>
+<center>
+    <p>HOUSIFY</p>
+</center>
+
 
 
 <script src="{% static 'index.js' %}"></script>

@@ -7,7 +7,6 @@
 
 {% block content%}
 <div class="tab">
-    <a href="{% url 'customer_profile' %}"><button class="tablinks">Profile</button></a>
     {% if request.user.customer.in_process %}
     <hr>
     <a href="{% url 'verifying'  %}"><button class="tablinks">Vendor Verification</button></a>
